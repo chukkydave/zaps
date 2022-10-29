@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="Description" content="ZAPS admin dashboard">
+    <meta name="Author" content="HTA">
+    <meta name="Keywords" content="" />
+
+    <!-- Title -->
+    <title>Zaps Admin</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/x-icon" />
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet">
+
+    <!--- Internal Select2 css-->
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+    <!--  Right-sidemenu css -->
+    <link href="assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+
+    <!--  Custom Scroll bar-->
+    <link href="assets/plugins/mscrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!--  Left-Sidebar css -->
+    <link rel="stylesheet" href="assets/css/closed-sidemenu.css">
+
+    <!--- Style css --->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!--- Dark-mode css --->
+    <link href="assets/css/style-dark.css" rel="stylesheet">
+
+    <!---Skinmodes css-->
+    <link href="assets/css/skin-modes.css" rel="stylesheet" />
+
+    <!--- Animations css-->
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+</head>
+
+<body class="main-body app sidebar-mini">
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <img src="assets/img/loader.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+
+    <!-- Page -->
+    <div class="page">
+
+        <!-- main-sidebar -->
+        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+        <aside class="app-sidebar sidebar-scroll">
+            <div class="main-sidebar-header active">
+                <a class="desktop-logo logo-light active" href="index.html"><img src="assets/img/brand/HONEY.png"
+                        class="main-logo" alt="logo"></a>
+                <a class="desktop-logo logo-dark active" href="index.html"><img src="assets/img/brand/logo-white.png"
+                        class="main-logo dark-theme" alt="logo"></a>
+                <a class="logo-icon mobile-logo icon-light active" href="index.html"><img
+                        src="assets/img/brand/favicon.png" class="logo-icon" alt="logo"></a>
+                <a class="logo-icon mobile-logo icon-dark active" href="index.html"><img
+                        src="assets/img/brand/favicon-white.png" class="logo-icon dark-theme" alt="logo"></a>
+            </div>
+            <div class="main-sidemenu">
+                <div class="app-sidebar__user clearfix">
+                    <div class="dropdown user-pro-body">
+                        <div class="">
+                            <img alt="user-img" class="avatar avatar-xl brround" src="assets/img/faces/6.jpg"><span
+                                class="avatar-status profile-status bg-green"></span>
+                        </div>
+                        <div class="user-info">
+                            <h4 class="font-weight-semibold mt-3 mb-0" id="userssname">Tolu Johnson</h4>
+                            <span class="mb-0 text-muted" id="usersrole">Admin</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="side-menu">
+                    <li class="side-item side-item-category">Main</li>
+                    <li class="slide">
+                        <a class="side-menu__item" href="dashboard.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path d="M5 5h4v6H5zm10 8h4v6h-4zM5 17h4v2H5zM15 5h4v2h-4z" opacity=".3" />
+                                <path
+                                    d="M3 13h8V3H3v10zm2-8h4v6H5V5zm8 16h8V11h-8v10zm2-8h4v6h-4v-6zM13 3v6h8V3h-8zm6 4h-4V5h4v2zM3 21h8v-6H3v6zm2-4h4v2H5v-2z" />
+                            </svg><span class="side-menu__label">Dashboard</span></a>
+                    </li>
+
+                    <li class="slide">
+                        <a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M3.31 11l2.2 8.01L18.5 19l2.2-8H3.31zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                                    opacity=".3" />
+                                <path
+                                    d="M22 9h-4.79l-4.38-6.56c-.19-.28-.51-.42-.83-.42s-.64.14-.83.43L6.79 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1zM12 4.8L14.8 9H9.2L12 4.8zM18.5 19l-12.99.01L3.31 11H20.7l-2.2 8zM12 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                            </svg><span class="side-menu__label">Procurements</span><i
+                                class="angle fe fe-chevron-down"></i></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" href="purchase-orders.html">Purchase Orders</a></li>
+                            <span></span>
+
+                        </ul>
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M3.31 11l2.2 8.01L18.5 19l2.2-8H3.31zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                                    opacity=".3" />
+                                <path
+                                    d="M22 9h-4.79l-4.38-6.56c-.19-.28-.51-.42-.83-.42s-.64.14-.83.43L6.79 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1zM12 4.8L14.8 9H9.2L12 4.8zM18.5 19l-12.99.01L3.31 11H20.7l-2.2 8zM12 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                            </svg><span class="side-menu__label">Employee Management</span><i
+                                class="angle fe fe-chevron-down"></i></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" href="employees.html">Employees</a></li>
+                            <li><a class="slide-item" href="leaves.html">Leaves</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm3.5 4c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zm-7 0c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11 7 10.33 7 9.5 7.67 8 8.5 8zm3.5 9.5c-2.33 0-4.32-1.45-5.12-3.5h1.67c.7 1.19 1.97 2 3.45 2s2.76-.81 3.45-2h1.67c-.8 2.05-2.79 3.5-5.12 3.5z"
+                                    opacity=".3" />
+                                <circle cx="15.5" cy="9.5" r="1.5" />
+                                <circle cx="8.5" cy="9.5" r="1.5" />
+                                <path
+                                    d="M12 16c-1.48 0-2.75-.81-3.45-2H6.88c.8 2.05 2.79 3.5 5.12 3.5s4.32-1.45 5.12-3.5h-1.67c-.69 1.19-1.97 2-3.45 2zm-.01-14C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                            </svg>
+                            <span class="side-menu__label">Project Management</span><i
+                                class="angle fe fe-chevron-down"></i></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" href="in-proposals.html">In-house Proposals</a></li>
+                            <li><a class="slide-item" href="public-proposals.html">Public Proposals</a></li>
+                            <li><a class="slide-item" href="projects.html">Projects</a></li>
+                            <li><a class="slide-item" href="contractor-project.html">Contractor Projects</a></li>
+                            <li><a class="slide-item" href="project-progress.html">Project Progress</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm3.5 4c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zm-7 0c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11 7 10.33 7 9.5 7.67 8 8.5 8zm3.5 9.5c-2.33 0-4.32-1.45-5.12-3.5h1.67c.7 1.19 1.97 2 3.45 2s2.76-.81 3.45-2h1.67c-.8 2.05-2.79 3.5-5.12 3.5z"
+                                    opacity=".3" />
+                                <circle cx="15.5" cy="9.5" r="1.5" />
+                                <circle cx="8.5" cy="9.5" r="1.5" />
+                                <path
+                                    d="M12 16c-1.48 0-2.75-.81-3.45-2H6.88c.8 2.05 2.79 3.5 5.12 3.5s4.32-1.45 5.12-3.5h-1.67c-.69 1.19-1.97 2-3.45 2zm-.01-14C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                            </svg>
+                            <span class="side-menu__label">Accounts</span><i class="angle fe fe-chevron-down"></i></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" href="salary.html">Salary</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </aside>
+        <!-- main-sidebar -->
+
+        <!-- main-content -->
+        <div class="main-content app-content">
+
+            <!-- main-header -->
+            <div class="main-header sticky side-header nav nav-item">
+                <div class="container-fluid">
+                    <div class="main-header-left ">
+                        <div class="responsive-logo">
+                            <a href="index.html"><img src="assets/img/brand/logo.png" class="logo-1" alt="logo"></a>
+                            <a href="index.html"><img src="assets/img/brand/logo-white.png" class="dark-logo-1"
+                                    alt="logo"></a>
+                            <a href="index.html"><img src="assets/img/brand/favicon.png" class="logo-2" alt="logo"></a>
+                            <a href="index.html"><img src="assets/img/brand/favicon.png" class="dark-logo-2"
+                                    alt="logo"></a>
+                        </div>
+                        <div class="app-sidebar__toggle" data-toggle="sidebar">
+                            <a class="open-toggle" href="#"><i class="header-icon fe fe-align-left"></i></a>
+                            <a class="close-toggle" href="#"><i class="header-icons fe fe-x"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="main-header-right">
+
+                        <div class="nav nav-item  navbar-nav-right ml-auto">
+                            <div class="nav-link" id="bs-example-navbar-collapse-1">
+                                <form class="navbar-form" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button type="reset" class="btn btn-default">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                            <button type="submit" class="btn btn-default nav-link resp-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="header-icon-svgs"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-search">
+                                                    <circle cx="11" cy="11" r="8"></circle>
+                                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                            <span></span>
+                            <div class="dropdown main-profile-menu nav nav-item nav-link">
+                                <a class="profile-user d-flex" href=""><img alt="" src="assets/img/faces/6.jpg"></a>
+                                <div class="dropdown-menu">
+                                    <span></span>
+                                    <a class="dropdown-item" id="logOutt"><i class="bx bx-log-out"></i> Sign
+                                        Out</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /main-header -->
+
+            <!-- container -->
+            <div class="container-fluid">
+
+                <!-- breadcrumb -->
+                <div class="breadcrumb-header justify-content-between">
+                    <div class="my-auto">
+                        <div class="d-flex">
+                            <h4 class="content-title mb-0 my-auto">Create Purchase Order</h4>
+                        </div>
+                    </div>
+                    <!-- <div class="d-flex my-xl-auto right-content">
+        
+                                <div class="pr-1 mb-3 mb-xl-0">
+                                    <a href="create-po.html"> <button type="button" class="btn btn-primary  btn-icon mr-2"><i
+                                                class="mdi mdi-plus"></i>
+                                        </button></a>
+        
+                                </div>
+                                <div class="pr-1 mb-3 mb-xl-0">
+        
+                                    <a aria-controls="collapseExample" aria-expanded="false" data-toggle="collapse"
+                                        href="#collapseExample" role="button"> <button type="button"
+                                            class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-filter-variant"></i>
+                                        </button></a>
+                                </div>
+        
+        
+        
+                            </div> -->
+                </div>
+                <!-- breadcrumb -->
+
+
+
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h3>Vendor Info</h3>
+                            <section>
+                                <div class="row row-sm" style="margin-bottom: 2em;">
+                                    <div class="col-md-5 col-lg-4">
+                                        <label class="form-control-label">Vendor: <span
+                                                class="tx-danger">*</span></label>
+                                        <select class="form-control select2 check-me" id="vendor">
+
+                                        </select>
+                                        <a data-target="#modaldemo1" data-toggle="modal"
+                                            style="color:blue; cursor:pointer; ">
+                                            Or create new vendor
+                                        </a>
+                                    </div>
+                                    <div class="col-md-5 col-lg-4 mg-t-20 mg-md-t-0">
+                                        <label class="form-control-label">PO Code: <span
+                                                class="tx-danger">*</span></label><input type="text"
+                                            class="form-control check-me" id="poCode" placeholder="PO-xxx">
+                                    </div>
+                                    <div class="col-md-5 col-lg-4 mg-t-20 mg-md-t-0">
+                                        <label class="form-control-label">Expected delivery date: <span
+                                                class="tx-danger">*</span></label><input type="date"
+                                            class="form-control check-me" placeholder="" id="expDate">
+                                    </div>
+                                </div>
+
+
+                            </section>
+                            <h3>Order Info</h3>
+                            <section>
+                                <div class="tags" id="tagss" style="margin-bottom: 2em;">
+
+                                </div>
+                                <div class="row row-sm" style="margin-bottom: 2em;">
+                                    <div class="col-md-5 col-lg-4">
+                                        <label class="form-control-label">Product Name: <span
+                                                class="tx-danger">*</span></label> <input class="form-control pop"
+                                            id="productName" name="Product Name" type="text">
+                                    </div>
+                                    <div class="col-md-5 col-lg-4 mg-t-20 mg-md-t-0">
+                                        <label class="form-control-label">Quantity: <span
+                                                class="tx-danger">*</span></label> <input class="form-control pop"
+                                            id="quantity" name="quantity" placeholder="0" required="" type="number">
+                                    </div>
+                                    <div class="col-md-5 col-lg-4 mg-t-20 mg-md-t-0">
+                                        <label class="form-control-label">Unit Cost: <span
+                                                class="tx-danger">*</span></label> <input class="form-control pop"
+                                            id="unitCost" name="unitCost" placeholder="0.00" type="number">
+                                    </div>
+                                </div>
+                                <div class="row row-sm" style="margin-bottom: 2em;">
+                                    <div class="col-md-5 col-lg-4">
+                                        <label class="form-control-label">Product Description: <span
+                                                class="tx-danger">*</span></label> <input class="form-control pop"
+                                            id="productDescription" name="productDescription" type="text">
+                                    </div>
+                                    <div class="col-md-5 col-lg-4 mg-t-20 mg-md-t-0"
+                                        style="display:flex; align-items: center; font-size: 1.5em;">
+                                        <b>Total:</b>₦<span id="totalAmount">0.00</span>
+                                    </div>
+                                    <!-- <div class="col-md-5 col-lg-4 mg-t-20 mg-md-t-0">
+                                                                    <label class="form-control-label">KG: <span
+                                                                            class="tx-danger">*</span></label> <input class="form-control"
+                                                                        id="kg" name="kg" placeholder="KG" type="text">
+                                                                </div> -->
+                                </div>
+
+                                <div class="row row-sm" style="margin-top: 3em; align-items: center;">
+                                    <button class="btn btn-info btn-with-icon btn-sm" id="addItem"><i
+                                            class="typcn typcn-plus"></i> Add
+                                        Item</button>
+                                    <button class="btn btn-info btn-with-icon btn-sm" id="saveItem"
+                                        style="display: none;"><i class="typcn typcn-plus"></i> Save
+                                        Item</button>
+                                    <div class="col-lg-3">
+                                        <label class="ckbox"><input type="checkbox" id="critical"><span>Mark as
+                                                critical</span></label>
+                                    </div>
+                                    <div style="float: right;">
+                                        <button class="btn btn-success btn-with-icon btn-sm"
+                                            id="createPO">Create</button>
+                                    </div>
+                                    <button class="btn btn-success mt-3 mb-0" id="createPOLoader" style="display: none;"
+                                        type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status"
+                                            aria-hidden="true"></span>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+
+                                </div>
+
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+            <!-- Container closed -->
+        </div>
+        <!-- main-content closed -->
+
+        <!-- Sidebar-right-->
+        <div class="sidebar sidebar-right sidebar-animate">
+            <div class="panel panel-primary card mb-0 box-shadow">
+                <div class="tab-menu-heading border-0 p-3">
+                    <div class="card-title mb-0">Notifications</div>
+                    <div class="card-options ml-auto">
+                        <a href="#" class="sidebar-remove"><i class="fe fe-x"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body tabs-menu-body latest-tasks p-0 border-0">
+                    <div class="tabs-menu ">
+                        <!-- Tabs -->
+                        <ul class="nav panel-tabs">
+                            <li class=""><a href="#side1" class="active" data-toggle="tab"><i
+                                        class="ion ion-md-chatboxes tx-18 mr-2"></i> Chat</a></li>
+                            <li><a href="#side2" data-toggle="tab"><i class="ion ion-md-notifications tx-18  mr-2"></i>
+                                    Notifications</a></li>
+                            <li><a href="#side3" data-toggle="tab"><i class="ion ion-md-contacts tx-18 mr-2"></i>
+                                    Friends</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active " id="side1">
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-primary brround avatar-md">CH</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>New Websites is Created</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">30 mins ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-danger brround avatar-md">N</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare For the Next Project</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">2 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-info brround avatar-md">S</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Decide the live Discussion</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">3 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-warning brround avatar-md">K</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Meeting at 3:00 pm</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">4 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-success brround avatar-md">R</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">1 days ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-pink brround avatar-md">MS</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">1 days ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-purple brround avatar-md">L</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">45 mintues ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center p-3">
+                                <div class="">
+                                    <span class="avatar bg-blue brround avatar-md">U</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">2 days ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-pane  " id="side2">
+                            <div class="list-group list-group-flush ">
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/12.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Madeleine</strong> Hey! there I' am available....
+                                        <div class="small text-muted">
+                                            3 hours ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/1.jpg"></span>
+                                    </div>
+                                    <div>
+                                        <strong>Anthony</strong> New product Launching...
+                                        <div class="small text-muted">
+                                            5 hour ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/2.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Olivia</strong> New Schedule Realease......
+                                        <div class="small text-muted">
+                                            45 mintues ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/8.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Madeleine</strong> Hey! there I' am available....
+                                        <div class="small text-muted">
+                                            3 hours ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/11.jpg"></span>
+                                    </div>
+                                    <div>
+                                        <strong>Anthony</strong> New product Launching...
+                                        <div class="small text-muted">
+                                            5 hour ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/6.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Olivia</strong> New Schedule Realease......
+                                        <div class="small text-muted">
+                                            45 mintues ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/9.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Olivia</strong> Hey! there I' am available....
+                                        <div class="small text-muted">
+                                            12 mintues ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane  " id="side3">
+                            <div class="list-group list-group-flush ">
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/9.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Mozelle Belt</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/11.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Florinda Carasco</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/10.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Alina Bernier</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/2.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Zula Mclaughin</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/13.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Isidro Heide</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/12.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Mozelle Belt</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light"><i
+                                                class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/4.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Florinda Carasco</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/7.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Alina Bernier</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light"><i
+                                                class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/2.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Zula Mclaughin</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/14.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Isidro Heide</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light"><i
+                                                class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/11.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Florinda Carasco</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/9.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Alina Bernier</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/15.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Zula Mclaughin</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/4.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Isidro Heide</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/Sidebar-right-->
+
+        <!-- Basic modal -->
+        <div class="modal" id="modaldemo1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content modal-content-demo">
+                    <div class="modal-header">
+                        <h6 class="modal-title">Add Vendor</h6><button aria-label="Close" class="close"
+                            data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <section>
+                            <div class="control-group form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control classChecker" id="vname" placeholder="Name">
+
+                            </div>
+                            <div class="control-group form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control classChecker" id="vemail"
+                                    placeholder="Email Address">
+                            </div>
+                            <div class="control-group form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="number" class="form-control classChecker" id="vphone" placeholder="Number">
+                            </div>
+                            <div class="control-group form-group mb-0">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control classChecker" id="vaddress"
+                                    placeholder="Address">
+                            </div>
+                            <div class="control-group form-group mb-0">
+                                <label class="form-label">Comment</label>
+                                <textarea class="form-control classChecker" id="vcomment"></textarea>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn ripple btn-primary" id="addVendor" type="button">Add</button>
+                        <button class="btn btn-primary mt-3 mb-0" id="addVendorLoader" style="display: none;"
+                            type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <span class="sr-only">Loading...</span>
+                        </button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Basic modal -->
+
+        <!-- Message Modal -->
+        <div class="modal fade" id="chatmodel" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-right chatbox" role="document">
+                <div class="modal-content chat border-0">
+                    <div class="card overflow-hidden mb-0 border-0">
+                        <!-- action-header -->
+                        <div class="action-header clearfix">
+                            <div class="float-left hidden-xs d-flex ml-2">
+                                <div class="img_cont mr-3">
+                                    <img src="assets/img/faces/6.jpg" class="rounded-circle user_img" alt="img">
+                                </div>
+                                <div class="align-items-center mt-2">
+                                    <h4 class="text-white mb-0 font-weight-semibold">Daneil Scott</h4>
+                                    <span class="dot-label bg-success"></span><span
+                                        class="mr-3 text-white">online</span>
+                                </div>
+                            </div>
+                            <ul class="ah-actions actions align-items-center">
+                                <li class="call-icon">
+                                    <a href="" class="d-done d-md-block phone-button" data-toggle="modal"
+                                        data-target="#audiomodal">
+                                        <i class="si si-phone"></i>
+                                    </a>
+                                </li>
+                                <li class="video-icon">
+                                    <a href="" class="d-done d-md-block phone-button" data-toggle="modal"
+                                        data-target="#videomodal">
+                                        <i class="si si-camrecorder"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="" data-toggle="dropdown" aria-expanded="true">
+                                        <i class="si si-options-vertical"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><i class="fa fa-user-circle"></i> View profile</li>
+                                        <li><i class="fa fa-users"></i>Add friends</li>
+                                        <li><i class="fa fa-plus"></i> Add to group</li>
+                                        <li><i class="fa fa-ban"></i> Block</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="" class="" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"><i class="si si-close text-white"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- action-header end -->
+
+                        <!-- msg_card_body -->
+                        <div class="card-body msg_card_body">
+                            <div class="chat-box-single-line">
+                                <abbr class="timestamp">February 1st, 2019</abbr>
+                            </div>
+                            <div class="d-flex justify-content-start">
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/6.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                                <div class="msg_cotainer">
+                                    Hi, how are you Jenna Side?
+                                    <span class="msg_time">8:40 AM, Today</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end ">
+                                <div class="msg_cotainer_send">
+                                    Hi Connor Paige i am good tnx how about you?
+                                    <span class="msg_time_send">8:55 AM, Today</span>
+                                </div>
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/9.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-start ">
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/6.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                                <div class="msg_cotainer">
+                                    I am good too, thank you for your chat template
+                                    <span class="msg_time">9:00 AM, Today</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end ">
+                                <div class="msg_cotainer_send">
+                                    You welcome Connor Paige
+                                    <span class="msg_time_send">9:05 AM, Today</span>
+                                </div>
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/9.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-start ">
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/6.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                                <div class="msg_cotainer">
+                                    Yo, Can you update Views?
+                                    <span class="msg_time">9:07 AM, Today</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mb-4">
+                                <div class="msg_cotainer_send">
+                                    But I must explain to you how all this mistaken born and I will give
+                                    <span class="msg_time_send">9:10 AM, Today</span>
+                                </div>
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/9.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-start ">
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/6.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                                <div class="msg_cotainer">
+                                    Yo, Can you update Views?
+                                    <span class="msg_time">9:07 AM, Today</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mb-4">
+                                <div class="msg_cotainer_send">
+                                    But I must explain to you how all this mistaken born and I will give
+                                    <span class="msg_time_send">9:10 AM, Today</span>
+                                </div>
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/9.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-start ">
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/6.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                                <div class="msg_cotainer">
+                                    Yo, Can you update Views?
+                                    <span class="msg_time">9:07 AM, Today</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mb-4">
+                                <div class="msg_cotainer_send">
+                                    But I must explain to you how all this mistaken born and I will give
+                                    <span class="msg_time_send">9:10 AM, Today</span>
+                                </div>
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/9.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-start">
+                                <div class="img_cont_msg">
+                                    <img src="assets/img/faces/6.jpg" class="rounded-circle user_img_msg" alt="img">
+                                </div>
+                                <div class="msg_cotainer">
+                                    Okay Bye, text you later..
+                                    <span class="msg_time">9:12 AM, Today</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- msg_card_body end -->
+                        <!-- card-footer -->
+                        <div class="card-footer">
+                            <div class="msb-reply d-flex">
+                                <div class="input-group">
+                                    <input type="text" class="form-control " placeholder="Typing....">
+                                    <div class="input-group-append ">
+                                        <button type="button" class="btn btn-primary ">
+                                            <i class="far fa-paper-plane" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- card-footer end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Video Modal -->
+        <div id="videomodal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content bg-dark border-0 text-white">
+                    <div class="modal-body mx-auto text-center p-7">
+                        <h5>Valex Video call</h5>
+                        <img src="assets/img/faces/6.jpg" class="rounded-circle user-img-circle h-8 w-8 mt-4 mb-3"
+                            alt="img">
+                        <h4 class="mb-1 font-weight-semibold">Daneil Scott</h4>
+                        <h6>Calling...</h6>
+                        <div class="mt-5">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a class="icon icon-shape rounded-circle mb-0 mr-3" href="#">
+                                        <i class="fas fa-video-slash"></i>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="icon icon-shape rounded-circle text-white mb-0 mr-3" href="#"
+                                        data-dismiss="modal" aria-label="Close">
+                                        <i class="fas fa-phone bg-danger text-white"></i>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="icon icon-shape rounded-circle mb-0 mr-3" href="#">
+                                        <i class="fas fa-microphone-slash"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- modal-body -->
+                </div>
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+
+        <!-- Audio Modal -->
+        <div id="audiomodal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content border-0">
+                    <div class="modal-body mx-auto text-center p-7">
+                        <h5>Valex Voice call</h5>
+                        <img src="assets/img/faces/6.jpg" class="rounded-circle user-img-circle h-8 w-8 mt-4 mb-3"
+                            alt="img">
+                        <h4 class="mb-1  font-weight-semibold">Daneil Scott</h4>
+                        <h6>Calling...</h6>
+                        <div class="mt-5">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a class="icon icon-shape rounded-circle mb-0 mr-3" href="#">
+                                        <i class="fas fa-volume-up bg-light"></i>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="icon icon-shape rounded-circle text-white mb-0 mr-3" href="#"
+                                        data-dismiss="modal" aria-label="Close">
+                                        <i class="fas fa-phone text-white bg-success"></i>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="icon icon-shape  rounded-circle mb-0 mr-3" href="#">
+                                        <i class="fas fa-microphone-slash bg-light"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- modal-body -->
+                </div>
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+
+        <!-- Footer opened -->
+        <div class="main-footer ht-40">
+            <div class="container-fluid pd-t-0-f ht-100p">
+                <span>Copyright © 2020 <a href="#">Valex</a>. Designed by <a href="https://www.spruko.com/">Spruko</a>
+                    All rights reserved.</span>
+            </div>
+        </div>
+        <!-- Footer closed -->
+
+    </div>
+    <!-- End Page -->
+
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!--Internal  Select2 js -->
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="assets/plugins/ionicons/ionicons.js"></script>
+
+    <!-- Moment js -->
+    <script src="assets/plugins/moment/moment.js"></script>
+    <script src="assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+    <!-- Internal Jquery.steps js -->
+    <script src="assets/plugins/jquery-steps/jquery.steps.min.js"></script>
+    <script src="assets/plugins/parsleyjs/parsley.min.js"></script>
+
+    <!-- P-scroll js -->
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+    <!-- Rating js-->
+    <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+    <script src="assets/plugins/rating/jquery.barrating.js"></script>
+
+    <!-- Custom Scroll bar Js-->
+    <script src="assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="assets/plugins/side-menu/sidemenu.js"></script>
+
+    <!-- Right-sidebar js -->
+    <script src="assets/plugins/sidebar/sidebar.js"></script>
+    <script src="assets/plugins/sidebar/sidebar-custom.js"></script>
+
+    <!-- eva-icons js -->
+    <script src="assets/js/eva-icons.min.js"></script>
+
+    <!-- Sticky js -->
+    <script src="assets/js/sticky.js"></script>
+
+    <!--Internal  Form-wizard js -->
+    <script src="assets/js/form-wizard.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="assets/js/form-elements.js"></script> -->
+    <!-- custom js -->
+    <script src="assets/js/custom.js"></script>
+
+
+
+
+    <!-- custom js -->
+    <script src="assets/sysJs/custom.js"></script>
+    <script src="assets/sysJs/create-projectpo.js"></script>
+
+</body>
+
+</html>

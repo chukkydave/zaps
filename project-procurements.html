@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="Description" content="ZAPS admin dashboard">
+    <meta name="Author" content="HTA">
+    <meta name="Keywords" content="" />
+
+    <!-- Title -->
+    <title>Zaps Admin</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/x-icon" />
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet">
+
+    <!--  Right-sidemenu css -->
+    <link href="assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+
+    <!--  Custom Scroll bar-->
+    <link href="assets/plugins/mscrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!--  Left-Sidebar css -->
+    <link rel="stylesheet" href="assets/css/closed-sidemenu.css">
+
+    <!--- Style css --->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!--- Dark-mode css --->
+    <link href="assets/css/style-dark.css" rel="stylesheet">
+
+    <!---Skinmodes css-->
+    <link href="assets/css/skin-modes.css" rel="stylesheet" />
+
+    <!--- Animations css-->
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+</head>
+
+<body class="main-body app sidebar-mini">
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <img src="assets/img/loader.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+
+    <!-- Page -->
+    <div class="page">
+
+        <!-- main-sidebar -->
+        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+        <aside class="app-sidebar sidebar-scroll">
+            <div class="main-sidebar-header active">
+                <a class="desktop-logo logo-light active" href="index.html"><img src="assets/img/brand/HONEY.png"
+                        class="main-logo" alt="logo"></a>
+                <a class="desktop-logo logo-dark active" href="index.html"><img src="assets/img/brand/logo-white.png"
+                        class="main-logo dark-theme" alt="logo"></a>
+                <a class="logo-icon mobile-logo icon-light active" href="index.html"><img
+                        src="assets/img/brand/favicon.png" class="logo-icon" alt="logo"></a>
+                <a class="logo-icon mobile-logo icon-dark active" href="index.html"><img
+                        src="assets/img/brand/favicon-white.png" class="logo-icon dark-theme" alt="logo"></a>
+            </div>
+            <div class="main-sidemenu">
+                <div class="app-sidebar__user clearfix">
+                    <div class="dropdown user-pro-body">
+                        <div class="">
+                            <img alt="user-img" class="avatar avatar-xl brround" src="assets/img/faces/6.jpg"><span
+                                class="avatar-status profile-status bg-green"></span>
+                        </div>
+                        <div class="user-info">
+                            <h4 class="font-weight-semibold mt-3 mb-0" id="userssname">Tolu Johnson</h4>
+                            <span class="mb-0 text-muted" id="usersrole">Admin</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="side-menu">
+                    <li class="side-item side-item-category">Main</li>
+                    <li class="slide">
+                        <a class="side-menu__item" href="dashboard.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path d="M5 5h4v6H5zm10 8h4v6h-4zM5 17h4v2H5zM15 5h4v2h-4z" opacity=".3" />
+                                <path
+                                    d="M3 13h8V3H3v10zm2-8h4v6H5V5zm8 16h8V11h-8v10zm2-8h4v6h-4v-6zM13 3v6h8V3h-8zm6 4h-4V5h4v2zM3 21h8v-6H3v6zm2-4h4v2H5v-2z" />
+                            </svg><span class="side-menu__label">Dashboard</span></a>
+                    </li>
+
+                    <li class="slide">
+                        <a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M3.31 11l2.2 8.01L18.5 19l2.2-8H3.31zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                                    opacity=".3" />
+                                <path
+                                    d="M22 9h-4.79l-4.38-6.56c-.19-.28-.51-.42-.83-.42s-.64.14-.83.43L6.79 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1zM12 4.8L14.8 9H9.2L12 4.8zM18.5 19l-12.99.01L3.31 11H20.7l-2.2 8zM12 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                            </svg><span class="side-menu__label">Procurements</span><i
+                                class="angle fe fe-chevron-down"></i></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" href="purchase-orders.html">Purchase Orders</a></li>
+                            <span></span>
+
+                        </ul>
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M3.31 11l2.2 8.01L18.5 19l2.2-8H3.31zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                                    opacity=".3" />
+                                <path
+                                    d="M22 9h-4.79l-4.38-6.56c-.19-.28-.51-.42-.83-.42s-.64.14-.83.43L6.79 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1zM12 4.8L14.8 9H9.2L12 4.8zM18.5 19l-12.99.01L3.31 11H20.7l-2.2 8zM12 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                            </svg><span class="side-menu__label">Employee Management</span><i
+                                class="angle fe fe-chevron-down"></i></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" href="employees.html">Employees</a></li>
+                            <li><a class="slide-item" href="leaves.html">Leaves</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm3.5 4c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zm-7 0c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11 7 10.33 7 9.5 7.67 8 8.5 8zm3.5 9.5c-2.33 0-4.32-1.45-5.12-3.5h1.67c.7 1.19 1.97 2 3.45 2s2.76-.81 3.45-2h1.67c-.8 2.05-2.79 3.5-5.12 3.5z"
+                                    opacity=".3" />
+                                <circle cx="15.5" cy="9.5" r="1.5" />
+                                <circle cx="8.5" cy="9.5" r="1.5" />
+                                <path
+                                    d="M12 16c-1.48 0-2.75-.81-3.45-2H6.88c.8 2.05 2.79 3.5 5.12 3.5s4.32-1.45 5.12-3.5h-1.67c-.69 1.19-1.97 2-3.45 2zm-.01-14C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                            </svg>
+                            <span class="side-menu__label">Project Management</span><i
+                                class="angle fe fe-chevron-down"></i></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" href="in-proposals.html">In-house Proposals</a></li>
+                            <li><a class="slide-item" href="public-proposals.html">Public Proposals</a></li>
+                            <li><a class="slide-item" href="projects.html">Projects</a></li>
+                            <li><a class="slide-item" href="contractor-project.html">Contractor Projects</a></li>
+                            <li><a class="slide-item" href="project-progress.html">Project Progress</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="side-menu__icon" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm3.5 4c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zm-7 0c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11 7 10.33 7 9.5 7.67 8 8.5 8zm3.5 9.5c-2.33 0-4.32-1.45-5.12-3.5h1.67c.7 1.19 1.97 2 3.45 2s2.76-.81 3.45-2h1.67c-.8 2.05-2.79 3.5-5.12 3.5z"
+                                    opacity=".3" />
+                                <circle cx="15.5" cy="9.5" r="1.5" />
+                                <circle cx="8.5" cy="9.5" r="1.5" />
+                                <path
+                                    d="M12 16c-1.48 0-2.75-.81-3.45-2H6.88c.8 2.05 2.79 3.5 5.12 3.5s4.32-1.45 5.12-3.5h-1.67c-.69 1.19-1.97 2-3.45 2zm-.01-14C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                            </svg>
+                            <span class="side-menu__label">Accounts</span><i class="angle fe fe-chevron-down"></i></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" href="salary.html">Salary</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </aside>
+        <!-- main-sidebar -->
+
+        <!-- main-content -->
+        <div class="main-content app-content">
+
+            <!-- main-header -->
+            <div class="main-header sticky side-header nav nav-item">
+                <div class="container-fluid">
+                    <div class="main-header-left ">
+                        <div class="responsive-logo">
+                            <a href="index.html"><img src="assets/img/brand/logo.png" class="logo-1" alt="logo"></a>
+                            <a href="index.html"><img src="assets/img/brand/logo-white.png" class="dark-logo-1"
+                                    alt="logo"></a>
+                            <a href="index.html"><img src="assets/img/brand/favicon.png" class="logo-2" alt="logo"></a>
+                            <a href="index.html"><img src="assets/img/brand/favicon.png" class="dark-logo-2"
+                                    alt="logo"></a>
+                        </div>
+                        <div class="app-sidebar__toggle" data-toggle="sidebar">
+                            <a class="open-toggle" href="#"><i class="header-icon fe fe-align-left"></i></a>
+                            <a class="close-toggle" href="#"><i class="header-icons fe fe-x"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="main-header-right">
+
+                        <div class="nav nav-item  navbar-nav-right ml-auto">
+                            <div class="nav-link" id="bs-example-navbar-collapse-1">
+                                <form class="navbar-form" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button type="reset" class="btn btn-default">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                            <button type="submit" class="btn btn-default nav-link resp-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="header-icon-svgs"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-search">
+                                                    <circle cx="11" cy="11" r="8"></circle>
+                                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                            <span></span>
+                            <div class="dropdown main-profile-menu nav nav-item nav-link">
+                                <a class="profile-user d-flex" href=""><img alt="" src="assets/img/faces/6.jpg"></a>
+                                <div class="dropdown-menu">
+                                    <span></span>
+                                    <a class="dropdown-item" id="logOutt"><i class="bx bx-log-out"></i> Sign
+                                        Out</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /main-header -->
+
+            <!-- container -->
+            <div class="container-fluid">
+
+                <!-- breadcrumb -->
+                <div class="breadcrumb-header justify-content-between">
+                    <div class="my-auto">
+                        <div class="d-flex">
+                            <h4 class="content-title mb-0 my-auto">Project Name Procurements</h4>
+                        </div>
+                    </div>
+                    <div class="d-flex my-xl-auto right-content">
+
+                        <div class="pr-1 mb-3 mb-xl-0">
+                            <a id="create-projectpo" href="create-projectpo.html"> <button type="button"
+                                    class="btn btn-primary  btn-icon mr-2"><i class="mdi mdi-plus"></i>
+                                </button></a>
+
+                        </div>
+                        <!-- <div class="pr-1 mb-3 mb-xl-0">
+
+                            <a aria-controls="collapseExample" aria-expanded="false" data-toggle="collapse"
+                                href="#collapseExample" role="button"> <button type="button"
+                                    class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-left-arrow-variant"></i>
+                                </button></a>
+                        </div> -->
+
+
+
+                    </div>
+                </div>
+                <!-- breadcrumb -->
+
+
+                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 collapse" style="margin: 0 auto;"
+                    id="collapseExample">
+                    <div class="card  box-shadow-0 ">
+                        <div class="card-header">
+                            <h4 class="card-title mb-1">Sign Up</h4>
+
+                        </div>
+                        <div class="card-body pt-0">
+                            <div>
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="firstname">Firstname</label>
+                                        <input type="text" class="form-control classChecker" id="firstname"
+                                            placeholder="firstname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname">Lastname</label>
+                                        <input type="text" class="form-control classChecker" id="lastname"
+                                            placeholder="lastname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email address</label>
+                                        <input type="email" class="form-control classChecker" id="email"
+                                            placeholder="email">
+                                    </div>
+
+                                    <!-- <div class="checkbox">
+                                        <div class="custom-checkbox custom-control">
+                                            <input type="checkbox" data-checkboxes="mygroup"
+                                                class="custom-control-input" id="checkbox-1">
+                                            <label for="checkbox-1" class="custom-control-label mt-1">Check me
+                                                Out</label>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <button type="submit" id="addBtn" class="btn btn-primary mt-3 mb-0">Submit</button>
+                                <button class="btn btn-primary mt-3 mb-0" id="addLoader" style="display: none;"
+                                    type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status"
+                                        aria-hidden="true"></span>
+                                    <span class="sr-only">Loading...</span>
+                                </button>
+                                <a class="btn btn-danger mt-3 mb-0" id="cancel" aria-controls="collapseExample"
+                                    aria-expanded="false" data-toggle="collapse" href="#collapseExample" role="button">
+                                    Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--div-->
+                <div class="col-xl-12">
+                    <div class="card">
+                        <!-- <div class="card-header pb-0">
+                            <div class="d-flex justify-content-between">
+                                <select class="form-control" name="" id="" style="width: 20%;">
+                                    <option value="">Select Action</option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped mg-b-0 text-md-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <!-- <th style="width:10%;"><input type="checkbox" name="" id=""></th> -->
+                                            <th>Code</th>
+                                            <th>Date</th>
+                                            <th>Vendor</th>
+                                            <!-- <th>Batch Total</th> -->
+                                            <th>Payment Status</th>
+                                            <th>PO Status</th>
+                                            <th>Priority</th>
+                                            <th>Action</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="purchase">
+
+
+                                    </tbody>
+
+
+
+
+
+                                </table>
+                                <div class="spinner-grow text-secondary" role="status" id="purchaseLoader"
+                                    style="display: none;">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div><!-- bd -->
+                        </div><!-- bd -->
+                    </div><!-- bd -->
+                </div>
+                <!--/div-->
+
+
+
+
+
+            </div>
+            <!-- Container closed -->
+        </div>
+        <!-- main-content closed -->
+
+        <!-- Sidebar-right-->
+        <div class="sidebar sidebar-right sidebar-animate">
+            <div class="panel panel-primary card mb-0 box-shadow">
+                <div class="tab-menu-heading border-0 p-3">
+                    <div class="card-title mb-0">Notifications</div>
+                    <div class="card-options ml-auto">
+                        <a href="#" class="sidebar-remove"><i class="fe fe-x"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body tabs-menu-body latest-tasks p-0 border-0">
+                    <div class="tabs-menu ">
+                        <!-- Tabs -->
+                        <ul class="nav panel-tabs">
+                            <li class=""><a href="#side1" class="active" data-toggle="tab"><i
+                                        class="ion ion-md-chatboxes tx-18 mr-2"></i> Chat</a></li>
+                            <li><a href="#side2" data-toggle="tab"><i class="ion ion-md-notifications tx-18  mr-2"></i>
+                                    Notifications</a></li>
+                            <li><a href="#side3" data-toggle="tab"><i class="ion ion-md-contacts tx-18 mr-2"></i>
+                                    Friends</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active " id="side1">
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-primary brround avatar-md">CH</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>New Websites is Created</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">30 mins ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-danger brround avatar-md">N</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare For the Next Project</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">2 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-info brround avatar-md">S</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Decide the live Discussion</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">3 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-warning brround avatar-md">K</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Meeting at 3:00 pm</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">4 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-success brround avatar-md">R</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">1 days ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-pink brround avatar-md">MS</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">1 days ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-purple brround avatar-md">L</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">45 mintues ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center p-3">
+                                <div class="">
+                                    <span class="avatar bg-blue brround avatar-md">U</span>
+                                </div>
+                                <a class="wrapper w-100 ml-3" href="#">
+                                    <p class="mb-0 d-flex ">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted mr-1"></i>
+                                            <small class="text-muted ml-auto">2 days ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-pane  " id="side2">
+                            <div class="list-group list-group-flush ">
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/12.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Madeleine</strong> Hey! there I' am available....
+                                        <div class="small text-muted">
+                                            3 hours ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/1.jpg"></span>
+                                    </div>
+                                    <div>
+                                        <strong>Anthony</strong> New product Launching...
+                                        <div class="small text-muted">
+                                            5 hour ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/2.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Olivia</strong> New Schedule Realease......
+                                        <div class="small text-muted">
+                                            45 mintues ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/8.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Madeleine</strong> Hey! there I' am available....
+                                        <div class="small text-muted">
+                                            3 hours ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/11.jpg"></span>
+                                    </div>
+                                    <div>
+                                        <strong>Anthony</strong> New product Launching...
+                                        <div class="small text-muted">
+                                            5 hour ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/6.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Olivia</strong> New Schedule Realease......
+                                        <div class="small text-muted">
+                                            45 mintues ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-3">
+                                        <span class="avatar avatar-lg brround cover-image"
+                                            data-image-src="assets/img/faces/9.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div>
+                                        <strong>Olivia</strong> Hey! there I' am available....
+                                        <div class="small text-muted">
+                                            12 mintues ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane  " id="side3">
+                            <div class="list-group list-group-flush ">
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/9.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Mozelle Belt</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/11.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Florinda Carasco</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/10.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Alina Bernier</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/2.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Zula Mclaughin</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/13.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Isidro Heide</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/12.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Mozelle Belt</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light"><i
+                                                class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/4.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Florinda Carasco</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/7.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Alina Bernier</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light"><i
+                                                class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/2.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Zula Mclaughin</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/14.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Isidro Heide</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light"><i
+                                                class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/11.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Florinda Carasco</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/9.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Alina Bernier</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/15.jpg"><span
+                                                class="avatar-status bg-success"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Zula Mclaughin</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex  align-items-center">
+                                    <div class="mr-2">
+                                        <span class="avatar avatar-md brround cover-image"
+                                            data-image-src="assets/img/faces/4.jpg"></span>
+                                    </div>
+                                    <div class="">
+                                        <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
+                                            Isidro Heide</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-sm btn-light" data-toggle="modal"
+                                            data-target="#chatmodel"><i class="fab fa-facebook-messenger"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/Sidebar-right-->
+
+        <div class="modal" id="modaldemo7">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">Make Payment</h6><button aria-label="Close" class="close"
+                            data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Amount to pay(₦)</label>
+                            <input class="form-control payCheck" id="amountPaid" type="number">
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button class="btn ripple btn-primary" type="button" id="payPO">Save</button>
+                        <button class="btn btn-primary mt-3 mb-0" id="payPOLoader" style="display: none;" type="button"
+                            disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <span class="sr-only">Loading...</span>
+                        </button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modaldemo3">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content modal-content-demo">
+                    <div class="modal-header">
+                        <h6 class="modal-title"></h6><button aria-label="Close" class="close" data-dismiss="modal"
+                            type="button"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row row-sm">
+                            <div class="col-md-12 col-xl-12">
+                                <div class=" main-content-body-invoice">
+                                    <div class="card card-invoice">
+                                        <div class="card-body">
+                                            <div class="invoice-header">
+                                                <h1 class="invoice-title" id="poName">Invoice</h1>
+                                                <!-- <div class="billed-from">
+                                                    <h6>BootstrapDash, Inc.</h6>
+                                                    <p>201 Something St., Something Town, YT 242, Country 6546<br>
+                                                        Tel No: 324 445-4544<br>
+                                                        Email: youremail@companyname.com</p>
+                                                </div> -->
+                                            </div><!-- invoice-header -->
+                                            <div class="row mg-t-20">
+                                                <!-- <div class="col-md">
+                                                    <label class="tx-gray-600">Ship To</label>
+                                                    <div class="billed-to">
+                                                        <h6>Juan Dela Cruz</h6>
+                                                        <p>4033 Patterson Road, Staten Island, NY 10301<br>
+                                                            Tel No: 324 445-4544<br>
+                                                            Email: youremail@companyname.com</p>
+                                                    </div>
+                                                </div> -->
+                                                <div class="col-md">
+                                                    <label class="tx-gray-600">Invoice Information</label>
+                                                    <p class="invoice-info-row"><span>Vendor</span>
+                                                        <span id="vendorView"></span>
+                                                    </p>
+                                                    <p class="invoice-info-row"><span>Expected Delivery Date</span>
+                                                        <span id="expDelDate"></span>
+                                                    </p>
+                                                    <!-- <p class="invoice-info-row"><span>Weight:</span> <span>12kg</span>
+                                                    </p> -->
+                                                    <!-- <p class="invoice-info-row"><span>PO Comment:</span>
+                                                        <span>MMMMMMMMM</span>
+                                                    </p> -->
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive mg-t-40">
+                                                <table class="table table-invoice border text-md-nowrap mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>S/N</th>
+                                                            <th>Item</th>
+                                                            <th>Description</th>
+                                                            <th>Quantity</th>
+                                                            <!-- <th class="tx-center">Supplied</th>
+                                                            <th class="tx-right">Rejected</th> -->
+                                                            <th>Unit Cost</th>
+                                                            <th>Total</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="viewPurchase">
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <hr class="">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- COL-END -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer opened -->
+        <div class="main-footer ht-40">
+            <div class="container-fluid pd-t-0-f ht-100p">
+                <span>Copyright © 2020 <a href="#">HTL</a>. Designed by <a>Ascent Digital</a>
+                    All rights reserved.</span>
+            </div>
+        </div>
+        <!-- Footer closed -->
+
+    </div>
+    <!-- End Page -->
+
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="assets/plugins/ionicons/ionicons.js"></script>
+
+    <!-- Moment js -->
+    <script src="assets/plugins/moment/moment.js"></script>
+
+    <!-- Eva-icons js -->
+    <script src="assets/js/eva-icons.min.js"></script>
+
+    <!-- P-scroll js -->
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+    <!-- Sticky js -->
+    <script src="assets/js/sticky.js"></script>
+
+    <!-- Rating js-->
+    <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+    <script src="assets/plugins/rating/jquery.barrating.js"></script>
+
+    <!-- Custom Scroll bar Js-->
+    <script src="assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="assets/plugins/side-menu/sidemenu.js"></script>
+
+    <!-- Right-sidebar js -->
+    <script src="assets/plugins/sidebar/sidebar.js"></script>
+    <script src="assets/plugins/sidebar/sidebar-custom.js"></script>
+
+    <!-- eva-icons js -->
+    <script src="assets/js/eva-icons.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- custom js -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/sysJs/custom.js"></script>
+    <script src="assets/sysJs/project-procurements.js"></script>
+
+</body>
+
+</html>
