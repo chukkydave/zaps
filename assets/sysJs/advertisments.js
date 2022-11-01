@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    listCategories();
+    listAds();
     $(document).on('click', '.viewDetails', function () {
         var id = $(this).attr('id').replace(/view_/, '');
 
@@ -22,7 +22,7 @@ $(document).ready(() => {
 
     $(document).on('click', '#addBtn', function () {
         if (isEmptyInput('.classChecker')) {
-            addCat();
+            addAds();
         }
     });
 
@@ -37,7 +37,7 @@ $(document).ready(() => {
     });
 });
 
-function listCategories() {
+function listAds() {
     $('#purchase').hide();
     $('#purchaseLoader').show();
     // $('#departmentLoader').show();
@@ -45,7 +45,7 @@ function listCategories() {
     let id = window.location.search.split('?')[1];
 
     axios
-        .get(`${apiPath}fetchCategories`, {
+        .get(`${apiPath}ads`, {
             headers: {
                 Authorization: token,
             },
@@ -58,14 +58,15 @@ function listCategories() {
 
             if (data.length !== 0) {
 
+
                 data.map((item, indx) => {
                     res += `<tr id="row_${item._id}">`;
                     // res += `<th><input type="checkbox" name="" id="check_${item._id}"></th>`;
 
-                    res += `<td><img width="40" height="40" src="${item.categoryIcon}" alt=""/></td>`;
-                    res += `<td>${item.categoryName}</td>`;
-                    // res += `<td>${moment(item.creationDate, 'YYYY-MM-DD').format('LL')}</td>`;
-                    res += `<td>${item.aboutcategory}</td>`;
+                    res += `<td><img width="100" height="50" src="${item.backgroundImage}" alt=""/></td>`;
+                    res += `<td>${item.adTitle}</td>`;
+                    res += `<td>${item.adOffer}</td>`;
+                    res += `<td>${item.adDescription}</td>`;
                     res += `<td><div class="dropdown">
                                 <button aria-expanded="false" aria-haspopup="true"
                                     class="btn ripple btn-default" data-toggle="dropdown"
@@ -204,20 +205,23 @@ async function Main() {
     myFile = await toBase64(file);
 }
 
-function addCat() {
+function addAds() {
     $('#addBtn').hide();
     $('#addLoader').show();
 
-    let aboutCategory = $('#aboutCategory').val();
-    let categoryName = $('#categoryName').val();
+    let adTitle = $('#adTitle').val();
+    let adOffer = $('#adOffer').val();
+    let adDescription = $('#adDescription').val();
 
     axios
         .post(
             `${apiPath}createCategory`,
             {
-                categoryName: categoryName,
-                aboutcategory: aboutCategory,
-                categoryIcon: myFile
+
+                adTitle: adTitle,
+                adOffer: adOffer,
+                adDescription: adDescription,
+                backgroundImage: myFile
             },
             {
                 headers: {
@@ -232,10 +236,10 @@ function addCat() {
 
             Swal.fire({
                 title: 'Success',
-                text: `Category record creation successful`,
+                text: `Ads record creation successful`,
                 icon: 'success',
                 confirmButtonText: 'Okay',
-                onClose: listCategories(),
+                onClose: listAds(),
             });
             $('.classChecker').val('');
         })
