@@ -221,7 +221,7 @@ function addAds() {
                 adTitle: adTitle,
                 adOffer: adOffer,
                 adDescription: adDescription,
-                backgroundImage: myFile
+                backgroundImage: ''
             },
             {
                 headers: {
